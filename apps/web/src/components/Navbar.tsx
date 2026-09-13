@@ -12,6 +12,8 @@ import {
   Briefcase,
   CheckSquare,
   Sparkles,
+  Database,
+  LogOut,
 } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
@@ -25,6 +27,9 @@ export const Navbar: React.FC = () => {
     openTaskModal,
     openProjectModal,
     openPortfolioModal,
+    user,
+    openAuthModal,
+    signOut,
   } = useApp();
 
   const [showCreateDropdown, setShowCreateDropdown] = useState(false);
@@ -167,14 +172,38 @@ export const Navbar: React.FC = () => {
             )}
           </div>
 
-          {/* Profile User Badge */}
-          <div className="flex items-center gap-2 pl-2 border-l border-slate-200 dark:border-slate-800">
-            <img
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150"
-              alt="Usuario"
-              className="w-8 h-8 rounded-full object-cover ring-2 ring-brand-500/30"
-            />
-          </div>
+          {/* Profile / Database Connection Badge */}
+          {user ? (
+            <div className="flex items-center gap-2 pl-2 border-l border-slate-200 dark:border-slate-800">
+              <div
+                className="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 text-xs font-semibold"
+                title={`Conectado a InsForge PostgreSQL como ${user.email}`}
+              >
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span>Postgres Online</span>
+              </div>
+              <button
+                onClick={signOut}
+                title={`Cerrar sesión (${user.email || 'Usuario'})`}
+                className="flex items-center gap-1.5 p-1 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors"
+              >
+                <div className="w-8 h-8 rounded-full bg-brand-500 text-white font-bold text-xs flex items-center justify-center ring-2 ring-brand-500/30">
+                  {(user.email || user.profile?.name || 'U').charAt(0).toUpperCase()}
+                </div>
+                <LogOut className="w-4 h-4 hidden lg:block text-slate-400 hover:text-rose-500 transition-colors" />
+              </button>
+            </div>
+          ) : (
+            <div className="flex items-center gap-2 pl-2 border-l border-slate-200 dark:border-slate-800">
+              <button
+                onClick={openAuthModal}
+                className="flex items-center gap-1.5 px-3 py-1.5 bg-brand-500/10 hover:bg-brand-500/20 text-brand-600 dark:text-brand-400 border border-brand-500/30 rounded-xl text-xs font-semibold transition-all shadow-sm active:scale-95"
+              >
+                <Database className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">Conectar DB</span>
+              </button>
+            </div>
+          )}
 
         </div>
 

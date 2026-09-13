@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@insforge/sdk": "^1.5.2",
     "@ludiday/core": "*",
     "@ludiday/ui": "*",
     "lucide-react": "^0.469.0",
