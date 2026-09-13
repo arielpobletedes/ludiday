@@ -12,6 +12,7 @@ import { PortfolioModal } from './components/PortfolioModal';
 import { ProjectModal } from './components/ProjectModal';
 import { MilestoneModal } from './components/MilestoneModal';
 import { LearningModal } from './components/LearningModal';
+import { AuthModal } from './components/AuthModal';
 import { Smartphone, Monitor } from 'lucide-react';
 
 const MainContent: React.FC = () => {
@@ -84,6 +85,7 @@ const MainContent: React.FC = () => {
       <ProjectModal />
       <MilestoneModal />
       <LearningModal />
+      <AuthModal />
     </div>
   );
 };
