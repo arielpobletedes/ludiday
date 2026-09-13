@@ -1,0 +1,1 @@
+make a .gitignore for each project if is necessary

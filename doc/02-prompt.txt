@@ -1,0 +1,7 @@
+Genera un nuevo dashboard para mostrar 1 mes. Debe contener dos paneles.
+El de la izquierda mostrar avtividad diaria, propongo una grilla donde cada título es una tarea y cada fila un día del mes escogido.
+En el panel de la derecha, debe tener 4 secciones:
+    1. Proyectos xon actividades del mes
+    2. Objetivos, que es una lista de tareas a terminar en ese mes:
+    3. Hitos: Registro manual de eventos signafitivos, requerirá una tabla y eventualmente algún hito puede estar asociado a una tarea.
+    4. APrendizajes: Registro manual de lecciones aprendidas signafitivas, requerirá una tabla y eventualmente algún aprendizaje puede estar asociado a una tarea. 

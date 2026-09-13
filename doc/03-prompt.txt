@@ -1,0 +1,1 @@
+Modifica la Grilla de Actividad Diaria par que en vez escribir el nombre del estado, pinte la celda o un cadrado con el color del estado, o pona un ícono del estado. 

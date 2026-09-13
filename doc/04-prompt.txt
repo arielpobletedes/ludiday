@@ -1,0 +1,1 @@
+Modifica la Grilla de Actividad Diaria para que sus títulos no muestren el texto, solamente un tooltip. 

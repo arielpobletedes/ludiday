@@ -1,0 +1,4 @@
+Crea una aplicación de mobile y escritorio moderna que me permita administrar portafolios, projectos y tareas.
+Tendrá tres pantallas principales para ver y editar las tareas en distintos niveles.
+Tendrá también un Dashboard Kanban donde se podrá observar una semana y con filtros para las tareas por estado, proyecto y portafolio.
+Genera solamente la UI
